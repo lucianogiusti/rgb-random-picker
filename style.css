@@ -22,7 +22,7 @@ li {
   float: left;
 }
 
-section {
+.main-rgb {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -32,7 +32,6 @@ section {
 
 .cuadro {
   grid-row: 2;
-
   width: 300px;
   height: 100px;
   border: 1px solid black;
@@ -65,4 +64,23 @@ section {
 
 .footer {
   text-align: center;
+}
+
+/* Historial y favoritos */
+
+.records {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+
+#lista-historial {
+  display: grid;
+  transform: rotate(180deg);
+}
+
+#lista-historial > li {
+  transform: rotate(-180deg);
 }
