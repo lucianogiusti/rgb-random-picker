@@ -59,8 +59,9 @@ li {
   width: 300px;
   height: 50px;
   border: 1px solid black;
-/*   background: transparent;
- */}
+  /*   background: transparent;
+ */
+}
 
 .footer {
   text-align: center;
@@ -81,16 +82,16 @@ h2 {
   font-size: 20px;
 }
 
-#lista-historial {
+#lista-historial,
+#favoritos {
   display: grid;
   transform: rotate(180deg);
-  
 }
 
-#lista-historial > li {
+#lista-historial > li,
+#favoritos > li {
   transform: rotate(-180deg);
   border: 1px solid black;
   text-align: center;
   padding: 8px;
- 
 }
