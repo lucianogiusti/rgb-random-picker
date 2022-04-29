@@ -14,13 +14,16 @@ document.querySelector(".btn").addEventListener("click", function (e) {
   document.querySelector(
     ".color-btn"
   ).textContent = `Tu color es ${colorCuadro.style.backgroundColor}`;
-  const results = [];
-  results.push(colorCuadro.style.backgroundColor);
-  console.log(results);
   const ul = document.getElementById("lista-historial");
   const li = document.createElement("li");
-  li.appendChild(document.createTextNode(results));
+  li.appendChild(document.createTextNode(colorCuadro.style.backgroundColor));
   ul.appendChild(li);
+
+  const birds = document.getElementById("lista-historial");
+  const i = birds.childNodes.length;
+  console.log(i);
+  const elements = birds.getElementsByTagName('li');
+  if (i > 6) birds.removeChild(elements[0]);
 });
 
-/* Removing list items from history */
+

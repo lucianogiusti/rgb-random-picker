@@ -59,8 +59,8 @@ li {
   width: 300px;
   height: 50px;
   border: 1px solid black;
-  background: transparent;
-}
+/*   background: transparent;
+ */}
 
 .footer {
   text-align: center;
@@ -76,11 +76,21 @@ li {
   gap: 1rem;
 }
 
+h2 {
+  padding: 8px;
+  font-size: 20px;
+}
+
 #lista-historial {
   display: grid;
   transform: rotate(180deg);
+  
 }
 
 #lista-historial > li {
   transform: rotate(-180deg);
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+ 
 }
