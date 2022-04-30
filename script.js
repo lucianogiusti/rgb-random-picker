@@ -52,6 +52,8 @@ document.getElementById("add-fav").addEventListener("click", function (e) {
     tag.remove()
   }
 
+  if (document.getElementById("lista-historial").lastChild.innerHTML == undefined)
+  ul.removeChild(li);
 })
   
   
