@@ -24,7 +24,6 @@ document.querySelector(".btn").addEventListener("click", function (e) {
 
   const birds = document.getElementById("lista-historial");
   const i = birds.childNodes.length;
-  console.log(i);
   const elements = birds.getElementsByTagName("li");
   if (i > 6) birds.removeChild(elements[0]);
 });
@@ -42,6 +41,20 @@ document.getElementById("add-fav").addEventListener("click", function (e) {
   const favColor = document.getElementById("favoritos");
   const favColorLength = favColor.childNodes.length;
   const favItems = favColor.getElementsByTagName("li");
+  
+  const tags = [...document.querySelectorAll('#favoritos > li')];
+  const texts = new Set(tags.map(x => x.innerHTML));
+  tags.forEach(tag => {
+  if(texts.has(tag.innerHTML)){
+    texts.delete(tag.innerHTML);
+  }
+  else{
+    tag.remove()
+  }
+
+})
+  
+  
 });
 
 /*   if (
