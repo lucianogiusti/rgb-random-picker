@@ -41,37 +41,20 @@ document.getElementById("add-fav").addEventListener("click", function (e) {
   const favColor = document.getElementById("favoritos");
   const favColorLength = favColor.childNodes.length;
   const favItems = favColor.getElementsByTagName("li");
-  
-  const tags = [...document.querySelectorAll('#favoritos > li')];
-  const texts = new Set(tags.map(x => x.innerHTML));
-  tags.forEach(tag => {
-  if(texts.has(tag.innerHTML)){
-    texts.delete(tag.innerHTML);
-  }
-  else{
-    tag.remove()
-  }
 
-  if (document.getElementById("lista-historial").lastChild.innerHTML == undefined)
-  ul.removeChild(li);
-})
-  
-  
-});
+  const tags = [...document.querySelectorAll("#favoritos > li")];
+  const texts = new Set(tags.map((x) => x.innerHTML));
+  tags.forEach((tag) => {
+    if (texts.has(tag.innerHTML)) {
+      texts.delete(tag.innerHTML);
+    } else {
+      tag.remove();
+    }
 
-/*   if (
-    document.getElementById("lista-historial").lastChild.innerHTML ==
-    document.getElementById("lista-historial").lastChild[-1].innerHTML
-  ) {
-    console.log("si es");
-  }
-  for (
-    let i = 0;
-    i < document.getElementById("lista-historial").children.length;
-    i++
-  ) {
     if (
-      document.getElementById("lista-historial").lastChild.textContent == 
-    );
-  }
-}); */
+      document.getElementById("lista-historial").lastChild.innerHTML ==
+      undefined
+    )
+      ul.removeChild(li);
+  });
+});
