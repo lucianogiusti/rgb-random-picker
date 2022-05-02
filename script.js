@@ -26,6 +26,12 @@ document.querySelector(".btn").addEventListener("click", function (e) {
   const i = birds.childNodes.length;
   const elements = birds.getElementsByTagName("li");
   if (i > 6) birds.removeChild(elements[0]);
+
+  const tags = [...document.querySelectorAll("#lista-historial > li")];
+  tags.forEach((tag) => {
+    tag.style.backgroundColor = tag.innerText;
+    navigator.clipboard.writeText(tag.innerText);
+  })
 });
 
 document.getElementById("add-fav").addEventListener("click", function (e) {
@@ -57,4 +63,11 @@ document.getElementById("add-fav").addEventListener("click", function (e) {
     )
       ul.removeChild(li);
   });
+
+  console.log(favItems);
+
+  tags.forEach((tag) => {
+    tag.style.backgroundColor = tag.innerText;
+    navigator.clipboard.writeText(tag.innerText);
+  })
 });
