@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  padding: 0 0 0 10px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -87,9 +86,11 @@ li {
 }
 
 h2 {
-  padding: 8px;
+  padding: 20px 0 0 0;
   font-size: 20px;
+  text-align: center;
 }
+
 
 #lista-historial,
 #favoritos {
