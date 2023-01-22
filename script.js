@@ -13,7 +13,6 @@ const favSelection = document.getElementById("favoritos");
 
 document.querySelector(".btn").addEventListener("click", function (e) {
   colorCuadro.style.backgroundColor = randomColor();
-  console.log(colorCuadro.style.backgroundColor);
   document.querySelector(
     ".color-btn"
   ).textContent = `Tu color es ${colorCuadro.style.backgroundColor}`;
@@ -35,7 +34,6 @@ document.querySelector(".btn").addEventListener("click", function (e) {
 });
 
 document.getElementById("add-fav").addEventListener("click", function (e) {
-  console.log(document.getElementById("lista-historial").lastChild.innerHTML);
   const ul = document.getElementById("favoritos");
   const li = document.createElement("li");
   li.appendChild(
@@ -63,8 +61,6 @@ document.getElementById("add-fav").addEventListener("click", function (e) {
     )
       ul.removeChild(li);
   });
-
-  console.log(favItems);
 
   tags.forEach((tag) => {
     tag.style.backgroundColor = tag.innerText;
